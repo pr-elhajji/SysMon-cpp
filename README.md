@@ -2,15 +2,14 @@
 
 ## Description
 
-**SysMon-cpp** est un moniteur système développé en C++ permettant de surveiller en temps réel l'utilisation des ressources du système, telles que le processeur (CPU), la mémoire (RAM), et les processus actifs. Inspiré des outils `top` et `htop`, il fournit une interface en ligne de commande (CLI) pour afficher des informations système critiques en temps réel.
+**SysMon-cpp** est un moniteur système développé en **C++** permettant de surveiller en temps réel l'utilisation des ressources du système, telles que le processeur (CPU), la mémoire (RAM), et les processus actifs. Inspiré des outils `top` et `htop`, il fournit une interface en ligne de commande (CLI) pour afficher des informations système critiques en temps réel.
 
 ### Fonctionnalités :
-- Surveillance de l'utilisation du **CPU** via `/proc/stat`.
-- Surveillance de la **mémoire** via `/proc/meminfo`.
-- Liste des **processus** actifs avec leur consommation de CPU/RAM.
-- Interface en ligne de commande pour afficher les informations système.
-- **Exportation des données** au format texte ou CSV.
-- Conçu avec une architecture **modulaire** en utilisant la **programmation orientée objet (POO)**.
+- **Surveillance CPU** : Affiche l'utilisation du CPU via `/proc/stat`.
+- **Surveillance Mémoire** : Affiche l'utilisation de la mémoire via `/proc/meminfo`.
+- **Surveillance des processus** : Liste des processus actifs avec leur consommation de CPU/RAM.
+- **Exportation des données** : Possibilité d'exporter les informations sous format texte ou CSV.
+- **Architecture modulaire** : Conçu en utilisant la programmation orientée objet (POO).
 
 ## Structure du Projet
 
@@ -50,12 +49,14 @@ Installation
 1. Cloner le Repository
 
 Clonez le repository avec la commande suivante :
+
 git clone https://github.com/essaady/SysMon-cpp.git
 cd SysMon-cpp
 
 2. Compiler le Projet
 
 Le projet utilise CMake pour la gestion de la compilation. Vous pouvez le compiler en utilisant les commandes suivantes :
+
 mkdir build
 cd build
 cmake ..
@@ -64,6 +65,7 @@ make
 3. Exécuter le Moniteur Système
 
 Une fois le projet compilé, vous pouvez exécuter le moniteur système avec la commande suivante :
+
 ./SysMon-cpp
 
 Utilisation
@@ -76,7 +78,6 @@ Le programme affichera les informations suivantes en temps réel :
 
     Processus : Liste des processus actifs avec leur consommation de ressources (CPU/RAM).
 
-Vous pouvez également exporter les données sous forme de texte ou de fichier CSV pour une analyse ultérieure.
 Commandes disponibles :
 
     --help : Affiche l'aide avec la liste des options disponibles.
@@ -91,6 +92,7 @@ Exécution des Tests
 Pour tester le projet, vous devez avoir un environnement de test configuré. Les tests sont situés dans le dossier tests/ et sont écrits en C++.
 
 Pour exécuter les tests, vous pouvez utiliser CMake :
+
 cd build
 make tests
 ./tests/test_CpuMonitor
@@ -100,7 +102,7 @@ Ajouter des Tests
 Pour ajouter des tests unitaires pour un module spécifique (par exemple, CpuMonitor), ajoutez un fichier de test dans le répertoire tests/ et implémentez les tests nécessaires. Assurez-vous que vos tests vérifient bien toutes les fonctionnalités du module (par exemple, calcul des ressources CPU, gestion des erreurs, etc.).
 Contribuer
 
-Ce projet est open-source et les contributions sont les bienvenues. Si vous souhaitez contribuer, veuillez suivre les étapes suivantes :
+Les contributions sont les bienvenues ! Pour contribuer à ce projet, veuillez suivre ces étapes :
 
     Fork ce repository
 
@@ -122,4 +124,4 @@ Bonnes pratiques de développement
 
 Licence
 
-Ce projet est sous licence MIT. Vous pouvez consulter les détails de la licence dans le fichier LICENSE.
+Ce projet est sous licence MIT. Vous pouvez consulter les détails de la licence dans le fichier LICENSE
